@@ -1,0 +1,24 @@
+Supuestos empresaTurismo - Eric Ferreira
+
+1- Estados de las reservas en ALTAS cambiados por:
+Activa: Para una pronta/segura realizacion del cambio a CONFIRMADA (Se puede tomar como indicio de que no será tenida en cuenta la fecha de vencimiento para ser anulada)
+Pendiente: En caso de una reserva con futura compra para clientes esporádicos 
+
+Se incluirán CANCELADA en la modificación de datos de las reservas
+No se incluye RECHAZADA ya que el sistema no cuenta con integración de Pagos como para ser enlazado a esta condición
+
+2- Se deberá añadir un servicio "Sin Servicios" Con coste 0. Para el registro de ventas-reservas que contengan unicamente Paquetes.
+
+3- Se incluye Diagrama de Clases en la barra de navegacion superior. Además se incluye pdf adjunto
+
+4- Debido a limitaciones en la base de datos. No se puede eliminar servicios o clientes que tengan enlazada una llave foránea hacia otra venta o reserva. Se debe eliminar primero los registros de clases principales que esten enlazadas.
+
+5- Todas las tablas excluyendo la de Clientes (Que dependen del DNI de cada cliente) contienen generación automática de ID.
+
+6- Al ser un sistema interno para la empresa se utilizan efectos o plugins que sean llevaderos para un uso constante de la página.
+
+7- Las credenciales de logueo ID:"root" PW:"root" (Que funcionan mediante autenticación y solicitud de sesión) están establecidas dentro del código (Sin posibilidad de registro particular) ya que al ser parte de un sistema interno y no estár en consigna se supone será de uso exclusivo.
+
+8- Al ser MODIFICADO el valor de algún servicio, no es modificado ningun registro en lo que respecta a precios en Ventas-Reservas ya registradas (Se intuye que el precio pueda subir con el tiempo pero las ventas o reservas ya fueron pactadas a precio anterior)
+
+9- Las vistas en las tablas estan optimizadas hasta para 4 SERVICIOS.
